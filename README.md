@@ -1,7 +1,7 @@
 # money-transfer-api
 Simple Java 8 API based on Spark to handle money transfer
 
-How to use
+<b>How to use</b>
 
 - Clone repo
 - Make sure there is nothing already running on port 8080
@@ -33,6 +33,8 @@ JSON POST to http://localhost:8080/sendMoney
   }
 ```
 HTTP 200 Money has been transfered with success
+
+
 ```
   {
     "senderId" : 2,
@@ -41,6 +43,7 @@ HTTP 200 Money has been transfered with success
   }
 ```
 HTTP 200 Money has been transfered with success
+
 
 ```
   {
@@ -51,6 +54,7 @@ HTTP 200 Money has been transfered with success
 ```
 HTTP 400 - Balance insufficient
 
+
 ```
   {
     "senderId" : 5,
@@ -60,6 +64,8 @@ HTTP 400 - Balance insufficient
 ```
 HTTP 400 - Sender not found
 
+
+
 ```
   {
     "senderId" : 1,
@@ -68,6 +74,7 @@ HTTP 400 - Sender not found
   }
 ```
 HTTP 400 - Receiver not found
+
 
 ```
 { 
