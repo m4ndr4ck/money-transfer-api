@@ -1,5 +1,5 @@
 # money-transfer-api
-Simple Java 8 API based on Spark to handle money transfer
+Simple Java 8 API based on Spark Framework to handle money transfer
 
 <b>How to use</b>
 
