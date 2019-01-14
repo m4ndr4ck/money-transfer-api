@@ -2,7 +2,6 @@ import com.revolut.service.WalletService;
 import org.apache.log4j.BasicConfigurator;
 
 import static spark.Spark.port;
-
 /**
  * Main class that initializes the application
  *
