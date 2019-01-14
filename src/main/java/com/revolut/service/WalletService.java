@@ -11,7 +11,6 @@ import com.google.gson.JsonParseException;
 import lombok.Data;
 
 import static com.revolut.util.Messages.*;
-import static com.revolut.util.Helpers.dataToJson;
 import static spark.Spark.post;
 /**
  * WalletService
@@ -43,31 +42,34 @@ public class WalletService implements Operations {
             try {
                 ObjectMapper mapper = new ObjectMapper();
                 TransferPayload transferPayload = mapper.readValue(request.body(), TransferPayload.class);
-
-                // simple validation on post request parameters
+                /**
+                 * Simple validation on post request parameters
+                 */
                 Helpers.validateRequest(transferPayload.senderId, transferPayload.receiverId, transferPayload.value);
-
-                // check if sender and receiver account exist on data source
+                /**
+                 * Check if sender and receiver account exist on data source
+                 */
                 String errResp = !Operations.accountExists().test((int)transferPayload.senderId, accounts) ? SENDER_NOT_FOUND :
                         !Operations.accountExists().test((int)transferPayload.receiverId, accounts) ? RECEIVER_NOT_FOUND : "";
                 if(!errResp.isEmpty()){
                     response.status(HTTP_BAD_REQUEST);
-                    return dataToJson(errResp);
+                    return errResp;
                 }
-
-                // perform money transfer
+                /**
+                 * Perform money transfer
+                 */
                 Operations.sendMoney(
                         accounts.get(transferPayload.senderId),
                         accounts.get(transferPayload.receiverId),
                         new BigDecimal(Double.valueOf(transferPayload.value)));
-
-                // return success response
+                /**
+                 * Return success response
+                 */
                 response.status(HTTP_GOOD_REQUEST);
-                response.type(APPLICATION_JSON);
                 return MONEY_TRANSFER_SUCCESS;
             } catch (JsonParseException jpe) {
                 response.status(HTTP_BAD_REQUEST);
-                return dataToJson(REQUEST_ERROR);
+                return REQUEST_ERROR;
             } catch (Exception e) {
                 response.status(HTTP_BAD_REQUEST);
                 return e.getMessage();

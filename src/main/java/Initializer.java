@@ -4,7 +4,7 @@ import org.apache.log4j.BasicConfigurator;
 import static spark.Spark.port;
 
 /**
- * Main class that initializes the applications
+ * Main class that initializes the application
  *
  * @author m4ndr4ck
  */
