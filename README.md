@@ -19,8 +19,8 @@ java -jar /path/to/money-transfer-api/target/money-transfer-api-1.0-SNAPSHOT-jar
 ```
 - Sample data and requests are available below
 
- Account ID 1 has balance 820.56
- Account ID 2 has balance 28320.13
+ Account ID 1 has balance 820.56<br>
+ Account ID 2 has balance 28320.13<br>
  Account ID 3 has balance 1460
 
 JSON POST to http://localhost:8080/sendMoney
