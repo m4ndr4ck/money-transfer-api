@@ -78,3 +78,12 @@ HTTP 400 - Receiver not found
 }
 ```
 HTTP 400 - There was an error parsing your request
+<br><br>
+```
+{ 
+  "senderId" : 1, 
+  "receiverId" : 1,
+  "value" : 250
+}
+```
+HTTP 400 - There was an error parsing your request
