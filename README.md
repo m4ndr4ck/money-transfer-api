@@ -33,8 +33,7 @@ JSON POST to http://localhost:8080/sendMoney
   }
 ```
 HTTP 200 Money has been transfered with success
-
-
+<br><br>
 ```
   {
     "senderId" : 2,
@@ -43,8 +42,7 @@ HTTP 200 Money has been transfered with success
   }
 ```
 HTTP 200 Money has been transfered with success
-
-
+<br><br>
 ```
   {
     "senderId" : 1,
@@ -54,7 +52,7 @@ HTTP 200 Money has been transfered with success
 ```
 HTTP 400 - Balance insufficient
 
-
+<br><br>
 ```
   {
     "senderId" : 5,
