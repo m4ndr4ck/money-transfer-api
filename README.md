@@ -32,7 +32,7 @@ JSON POST to http://localhost:8080/sendMoney
     "value" : 150
   }
 ```
-HTTP 200 Money has been transfered with success
+HTTP 200 - Money has been transfered with success
 <br><br>
 ```
   {
@@ -41,7 +41,7 @@ HTTP 200 Money has been transfered with success
     "value" : 1792.35
   }
 ```
-HTTP 200 Money has been transfered with success
+HTTP 200 - Money has been transfered with success
 <br><br>
 ```
   {
@@ -51,7 +51,6 @@ HTTP 200 Money has been transfered with success
   }
 ```
 HTTP 400 - Balance insufficient
-
 <br><br>
 ```
   {
@@ -61,9 +60,7 @@ HTTP 400 - Balance insufficient
   }
 ```
 HTTP 400 - Sender not found
-
-
-
+<br><br>
 ```
   {
     "senderId" : 1,
@@ -72,8 +69,7 @@ HTTP 400 - Sender not found
   }
 ```
 HTTP 400 - Receiver not found
-
-
+<br><br>
 ```
 { 
   "senderId" : "aaaaazz", 
