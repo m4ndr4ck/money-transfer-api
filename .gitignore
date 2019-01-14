@@ -1,0 +1,5 @@
+**/target
+**/.idea
+**/.attach*
+**/logs
+**/money-transfer-api.iml
