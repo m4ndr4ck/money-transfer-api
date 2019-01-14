@@ -7,7 +7,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 import static com.revolut.util.Messages.APPLICATION_JSON;
-
 /**
  * Helper class that provides a method to make post requests on integration tests
  *
