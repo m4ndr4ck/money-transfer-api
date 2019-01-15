@@ -26,47 +26,47 @@ java -jar /path/to/money-transfer-api/target/money-transfer-api-1.0-SNAPSHOT-jar
 JSON POST to http://localhost:8080/sendMoney
 
 ```
-  {
-    "senderId" : 1,
-    "receiverId" : 2,
-    "value" : 150
-  }
+{
+  "senderId" : 1,
+  "receiverId" : 2,
+  "value" : 150
+}
 ```
 HTTP 200 - Money has been transfered with success
 <br><br>
 ```
-  {
-    "senderId" : 2,
-    "receiverId" : 3,
-    "value" : 1792.35
-  }
+{
+  "senderId" : 2,
+  "receiverId" : 3,
+  "value" : 1792.35
+}
 ```
 HTTP 200 - Money has been transfered with success
 <br><br>
 ```
-  {
-    "senderId" : 1,
-    "receiverId" : 2,
-    "value" : 999999
-  }
+{
+  "senderId" : 1,
+  "receiverId" : 2,
+  "value" : 999999
+}
 ```
 HTTP 400 - Balance insufficient
 <br><br>
 ```
-  {
-    "senderId" : 5,
-    "receiverId" : 1,
-    "value" : 150
-  }
+{
+  "senderId" : 5,
+  "receiverId" : 1,
+  "value" : 150
+}
 ```
 HTTP 400 - Sender not found
 <br><br>
 ```
-  {
-    "senderId" : 1,
-    "receiverId" : 5,
-    "value" : 150
-  }
+{
+  "senderId" : 1,
+  "receiverId" : 5,
+  "value" : 150
+}
 ```
 HTTP 400 - Receiver not found
 <br><br>
